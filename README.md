@@ -1,6 +1,6 @@
 # Clipboard Share
 
-A simple, public clipboard sharing web app built with Flask. Paste text, links, images, or files and share them via a unique URL.
+A simple, public clipboard sharing web app built with Flask.
 
 ## Features
 
