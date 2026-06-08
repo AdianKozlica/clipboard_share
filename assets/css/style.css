@@ -1,0 +1,142 @@
+.modal-overlay:not(.hidden) {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  border-radius: 0.75rem;
+  padding: 2rem;
+  max-width: 28rem;
+  width: 90%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.clipboard-card {
+  position: relative;
+  transition: box-shadow 0.2s ease;
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+.clipboard-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .clipboard-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.clipboard-card:hover .card-actions {
+  opacity: 1;
+}
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.success {
+  background: #16a34a;
+}
+
+.toast.error {
+  background: #dc2626;
+}
+
+/* Markdown content */
+.markdown-content h1 { font-size: 1.5em; font-weight: bold; margin: 0.5em 0; }
+.markdown-content h2 { font-size: 1.25em; font-weight: bold; margin: 0.5em 0; }
+.markdown-content h3 { font-size: 1.1em; font-weight: bold; margin: 0.5em 0; }
+.markdown-content p { margin: 0.4em 0; }
+.markdown-content code {
+  background: #f3f4f6;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: monospace;
+}
+.dark .markdown-content code {
+  background: #374151;
+  color: #e5e7eb;
+}
+.markdown-content pre {
+  background: #f6f8fa;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+.dark .markdown-content pre {
+  background: #0d1117;
+}
+.markdown-content pre code,
+.markdown-content pre code.hljs,
+.markdown-content pre .hljs {
+  background: transparent !important;
+  padding: 0;
+  color: inherit;
+}
+/* Override all highlight.js token backgrounds */
+.markdown-content .hljs-keyword,
+.markdown-content .hljs-string,
+.markdown-content .hljs-number,
+.markdown-content .hljs-comment,
+.markdown-content .hljs-function,
+.markdown-content .hljs-title,
+.markdown-content .hljs-params,
+.markdown-content .hljs-built_in,
+.markdown-content .hljs-type,
+.markdown-content .hljs-attr,
+.markdown-content .hljs-selector-class,
+.markdown-content .hljs-selector-tag,
+.markdown-content .hljs-name,
+.markdown-content .hljs-attribute,
+.markdown-content .hljs-symbol,
+.markdown-content .hljs-addition,
+.markdown-content .hljs-deletion,
+.markdown-content .hljs-emphasis,
+.markdown-content .hljs-strong,
+.markdown-content .hljs-link,
+.markdown-content .hljs-section,
+.markdown-content .hljs-meta {
+  background: transparent !important;
+}
+.markdown-content ul { list-style: disc; padding-left: 1.5em; margin: 0.4em 0; }
+.markdown-content ol { list-style: decimal; padding-left: 1.5em; margin: 0.4em 0; }
+.markdown-content blockquote {
+  border-left: 3px solid #d1d5db;
+  padding-left: 0.75em;
+  margin: 0.4em 0;
+  color: #6b7280;
+}
+.dark .markdown-content blockquote {
+  border-left-color: #4b5563;
+  color: #9ca3af;
+}
+.markdown-content a { color: #2563eb; text-decoration: underline; }
+.dark .markdown-content a { color: #60a5fa; }
+.markdown-content table { border-collapse: collapse; margin: 0.5em 0; width: 100%; }
+.markdown-content th, .markdown-content td { border: 1px solid #d1d5db; padding: 0.35em 0.65em; text-align: left; }
+.dark .markdown-content th, .dark .markdown-content td { border-color: #4b5563; }
+.markdown-content th { font-weight: 600; background: #f9fafb; }
+.dark .markdown-content th { background: #1f2937; }
+
