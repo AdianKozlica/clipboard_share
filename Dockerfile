@@ -21,7 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-COPY --from=frontend /app/assets/css/output.css ./assets/css/output.css
+COPY --from=frontend . .
 
 EXPOSE 5000
 
